@@ -1,3 +1,4 @@
+<!-- apps/frontend/modules/job/templates/indexSuccess.php -->
 <?php use_stylesheet('jobs.css') ?>
 
 <div id="jobs">
@@ -6,8 +7,7 @@
       <tr class="<?php echo fmod($i, 2) ? 'even' : 'odd' ?>">
         <td class="location"><?php echo $job->getLocation() ?></td>
         <td class="position">
-          <a href="<?php echo url_for('job/show?id='.$job->getId().'&company='.$job->getCompany().
-  '&location='.$job->getLocation().'&position='.$job->getPosition()) ?>">
+          <a href="<?php echo url_for('job/show?id='.$job->getId()) ?>">
             <?php echo $job->getPosition() ?>
           </a>
         </td>
@@ -16,3 +16,4 @@
     <?php endforeach ?>
   </table>
 </div>
+

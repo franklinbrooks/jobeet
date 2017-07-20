@@ -20,7 +20,6 @@ class jobActions extends sfActions
     $this->job = $this->getRoute()->getObject();
   }
 
-
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new JobeetJobForm();
